@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All rentals</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of rentals</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>rent</title>
+</head>
+<body>
+
+
+<h1>All rents:
+
+
+
+    <tr th:each="rental : ${rentals}" th:action="@{/rentals}" method="GET">
+
+</h1>
+
+<br><br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Seating</th>
+        <th>Beds</th>
+        <th>Mileage</th>
+        <th>Price</th>
+
+
+
+    </tr>
+
+
+    <tr th:each="rental : ${rentals}">
+        <th th:text="${rental.id}"></th>
+        <th th:text="${rental.dateOfSale}"></th>
+        <th th:text="${rental.saleAmount}"></th>
+        <th th:text="${rental.rentalDate}"></th>
+        <th th:text="${rental.returnDate}"></th>
+        <th th:text="${rental.customerFirstName}"></th>
+        <th th:text="${rental.customerLastName}"></th>
+        <th th:text="${rental.customerAddress}"></th>
+        <th th:text="${rental.customerPhoNo}"></th>
+        <th th:text="${rental.customerEmail}"></th>
+        <th th:text="${rental.rentalActive}"></th>
+
+
+
+    </tr>
+</table>
+</tr>
+
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
